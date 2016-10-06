@@ -7,16 +7,13 @@ for (var i = 0; i < colorPalette.length; i++) {
   backPalette.append('<a href="#" data-command="backcolor" data-value="' + '#' + colorPalette[i] + '" style="background-color:' + '#' + colorPalette[i] + ';" class="palette-item"></a>');
 }
 
-$('#my-wys a').click(function(e) {
+$('.btn-toolbar a').click(function(e) {
   e.preventDefault();
   var command = $(this).data('command');
   console.log(command);
   if (command == 'h1' || 
     command == 'h2' || 
     command == 'h3' || 
-    command == 'h4' || 
-    command == 'h5' || 
-    command == 'h6' || 
     command == 'p') {
     document.execCommand('formatBlock', false, command);
   }
